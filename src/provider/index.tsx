@@ -1,3 +1,4 @@
+"use client"
 import { ThirdwebProvider } from "@thirdweb-dev/react"
 import React from "react"
 
