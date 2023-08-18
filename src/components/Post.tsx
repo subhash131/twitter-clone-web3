@@ -3,7 +3,7 @@ import { Card, Text } from "@tremor/react"
 import { Eye, Heart, MessageCircle, Repeat2, Upload } from "lucide-react"
 
 const Post = ({ props }: any) => {
-	const { description, image, _id } = props
+	const { description, user } = props
 
 	return (
 		<Card className='rounded-none'>
@@ -11,23 +11,20 @@ const Post = ({ props }: any) => {
 				<div className='flex'>
 					<img
 						className='inline-block h-12 w-12 rounded-full'
-						src='https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg'
-						alt='Dan_Abromov'
+						src='https://img.freepik.com/premium-vector/fancy-colorful-lion-head-logo-vector_648489-69.jpg?w=2000'
+						alt='profile image'
 					/>
 					<div className='ml-6'>
 						<label className='text-[0.7rem] text-[grey]'>
-							{_id}
+							{user.substring(0, 8)}...
+							{user.substring(user.length - 5)}
 						</label>
-						<Text className='py-2 text-[gray]'>{description}</Text>
+						<Text className='py-2 text-gray-950'>
+							{description}
+						</Text>
 					</div>
 				</div>
-				<div className='px-4 mx-auto'>
-					{/* <img
-						className='inline-block h-[30rem]  w-auto object-cover rounded mx-auto'
-						src='https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg'
-						alt='Dan_Abromov'
-					/> */}
-				</div>
+				<div className='px-4 mx-auto'></div>
 				<div className='flex gap-12 mx-auto '>
 					<div className='flex gap-2'>
 						<MessageCircle
